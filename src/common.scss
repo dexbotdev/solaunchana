@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap');
+
+// Reset css
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+del,
+em,
+img,
+small,
+strong,
+b,
+u,
+i,
+hr,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+button,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    word-wrap: break-word;
+}
+
+html {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption,
+th,
+td {
+    text-align: inherit;
+    font-weight: inherit;
+    vertical-align: middle;
+}
+
+q,
+blockquote {
+    quotes: none;
+}
+
+a img {
+    border: none;
+}
+
+article,
+aside,
+details,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+button,
+a {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+body {
+    overflow-x: hidden;
+    font-size: 16px;
+    background-color: #000;
+    color: #f9f9f9;
+    font-family: 'Raleway', sans-serif;
+    @media screen and (max-width: 700px) {
+        font-size: 15px;
+    }
+}
+
+.bg-join {
+    background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+.bounce {
+    animation: bounce 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50px, 50px, 20px);
+    }
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Load Icon */
+.load-icon {
+    width: 50px;
+    height: 10px;
+}
+.load-icon span {
+    position: absolute;
+    display: inline-block;
+    background: #fff;
+    width: 20%;
+    height: 100%;
+    border-radius: 100px;
+}
+.load-icon span:nth-of-type(1) {
+    left: 0;
+}
+.load-icon span:nth-of-type(2) {
+    left: 40%;
+}
+.load-icon span:nth-of-type(3) {
+    right: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.bg-gradient {
+    background: linear-gradient(90deg, #8f00ff 0%, #3320ba 50%, #4f0a94 100%);
+}
+
+.bg-gradient-1 {
+    background: linear-gradient(142deg, rgba(5, 0, 255, 0.3) 0%, rgba(0, 178, 255, 0.3) 100%);
+}
+
+.font-title {
+    // font-family: "Source Code Pro", monospace;
+    font-family: 'Raleway', sans-serif;
+}
+
+.bg-gradient-choose {
+    background: linear-gradient(265deg, #ff551f -18.11%, #9745ff 84.7%, #ff551f 115.26%);
+}
+
+.bg-gradient-card-project {
+    background: linear-gradient(267deg, #0e0617 0%, #001a10 100%);
+}
+
+.bg-gradient-raise {
+    background: linear-gradient(267deg, #00ffa3 0%, #dc1fff 100%);
+}
+
+.bg-gradient-trending {
+    background: linear-gradient(-267deg, #ff551f 0%, rgba(151, 69, 255, 0) 100%);
+}
+
+/* Animation */
+.load-icon span {
+    animation-name: loading;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+.load-icon span:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+.load-icon span:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+/* Keyframes */
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* This isn't needed, just styling pen. */
+
+.text-gradient {
+    background: linear-gradient(94deg, #0047ff 26.92%, #4d0b97 87.95%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+p {
+    line-height: 20px;
+}
+
+a {
+    transition: color 0.3s linear;
+}
+
+// Common
+// .container {
+//     width: 70%;
+//     margin: 0 auto;
+//     @media screen and (max-width: 1400px) {
+//         width: 80%;
+//     }
+//     @media screen and (max-width: 700px) {
+//         width: 90%;
+//     }
+//     @media screen and (max-width: 500px) {
+//         width: 95% !important;
+//     }
+// }
+
+// .row {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+// }
+
+// .min-row {
+//     width: 95%;
+//     margin: 0 auto;
+// }
+
+.row-border {
+    border-bottom: 2px solid #35c0fc;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.btn {
+    font-size: 16px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: opacity 0.3s linear;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    &-small {
+        padding: 8px 15px !important;
+        @media screen and (max-width: 1250px) {
+            padding: 8px 10px !important;
+        }
+    }
+    &-medium {
+        padding: 12px 30px !important;
+        @media screen and (max-width: 1250px) {
+            padding: 10px 15px !important;
+        }
+    }
+}
+
+.center {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.btn-primary {
+    background: linear-gradient(105deg, #0047ff 10%, #57048a 100%);
+}
+
+.wallet-adapter-button-trigger {
+    background: linear-gradient(105deg, #0047ff 10%, #57048a 100%);
+    border-radius: 999px !important;
+}
+
+.wallet-adapter-button {
+    height: 55px !important;
+}
+
+.wallet-adapter-dropdown {
+    border-radius: 999px !important;
+}
+
+.box-shadow-custom-1 {
+    box-shadow: 4px 4px 6.2px 1px rgba(0, 0, 0, 0.25) inset;
+}
+
+.btn-secondary {
+    background-color: #fc7100;
+}
+
+.btn-disabled {
+    background-color: gray;
+}
+
+.sub-title {
+    font-size: 27px;
+    text-align: center;
+    @media screen and (max-width: 1000px) {
+        font-size: 22px;
+    }
+}
+
+.text-orange {
+    font-weight: bold;
+    background: rgb(252, 154, 0);
+    background: linear-gradient(266deg, rgba(252, 154, 0, 1) 0%, rgba(250, 178, 13, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-orange-dark {
+    color: #fca809;
+}
+
+.text-black {
+    color: #000;
+}
+
+.text-link {
+    border-bottom: 1px solid #fca809;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.link-normal {
+    background: linear-gradient(
+        86deg,
+        #797979 -43.81%,
+        #919191 -40.96%,
+        #b8b8b8 -33.83%,
+        #d7d7d7 -28.12%,
+        #ededed -22.41%,
+        #fafafa -16.7%,
+        #fff -12.42%,
+        #f9f9f9 -3.86%,
+        #e9e9e9 6.12%,
+        #cfcfcf 16.11%,
+        #c2c2c2 20.39%,
+        #a3a3a3 37.51%,
+        #e4e4e4 66.05%,
+        #fff 76.04%,
+        #f9f9f9 78.89%,
+        #e9e9e9 84.6%,
+        #cecece 90.3%,
+        #aaa 96.01%,
+        #909090 98.86%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.app {
+    color: #fff;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.modal-custom-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background-color: #f2f2f2;
+    padding: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: #656969;
+    }
+}
+
+input {
+    outline: none;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999999;
+}
+
+.modal-content {
+    position: relative;
+    z-index: 999999;
+    width: 60%;
+    max-width: 500px;
+    min-height: 200px;
+    background-color: white;
+    color: #000;
+    border-radius: 15px;
+    @media screen and (max-width: 800px) {
+        width: 90%;
+    }
+}
+
+.bg-header {
+    // background-image: url('./assets/image/bg-1.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+}
+
+button:disabled,
+button[disabled] {
+    background: #cccccc !important;
+    color: #666666;
+    cursor: not-allowed;
+    &:hover {
+        opacity: 1;
+    }
+
+    span {
+        color: #666;
+    }
+}
+
+$loading-font-size: 10px;
+$loading-color: rebeccapurple;
+$loading-icon-size: 24px;
+$animation-time: 2s;
+$overlay-color: white;
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes spin {
+    0%,
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(720deg) scale(0.5);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        letter-spacing: $loading-font-size/2;
+        left: calc(50% + (#{$loading-font-size}/ 2));
+    }
+    50% {
+        letter-spacing: $loading-font-size/4;
+        left: 50%;
+    }
+}
+
+.loading {
+    animation: fadein 2s;
+}
+
+.spinner-wrapper {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $overlay-color;
+    position: fixed;
+    z-index: 15;
+}
+
+.spinner-text {
+    position: absolute;
+    top: calc(50% - (#{$loading-font-size}/ 2));
+    left: 50%;
+    color: $loading-color;
+    text-transform: uppercase;
+    letter-spacing: $loading-font-size/4;
+    font: bold $loading-font-size sans-serif;
+    transform: translate3d(-50%, -50%);
+    animation: pulse $animation-time infinite;
+}
+
+.spinner {
+    margin: 0;
+    display: block;
+    position: absolute;
+    left: calc(50% - (#{$loading-icon-size}* 2.5));
+    top: calc(50% - #{$loading-icon-size});
+    border: $loading-icon-size solid $loading-color;
+    width: 1px;
+    height: 1px;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-radius: 50px;
+    animation: spin $animation-time infinite;
+}
+
+.wallet-list {
+    height: 270px;
+
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.wallet-list::-webkit-scrollbar {
+    display: none;
+}
